@@ -1,11 +1,13 @@
-## Exceptions
+__Exceptions__
 Project done during Software Engineering at ALX. Learning about exceptions, how to use them, how to use errors and how to raise them in Python.
 
-## Technologies
+__Technologies__
 Python Scripts are written with Python 3
 C files are compiled using gcc
 Tested on Ubuntu 20.04 LTS
-## Files
+
+
+__Files__
 Filename	Description
 0-safe_print_list.py	Function that prints x elements
 1-safe_print_integer.py	Function that prints an integer with "{:d}".format()
