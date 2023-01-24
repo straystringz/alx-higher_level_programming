@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # base.py
+# Sagebeme
 """Defines a base model class."""
 import json
 import csv
@@ -172,7 +173,7 @@ class Base:
                 turt.left(90)
             turt.hideturtle()
 
-     turt.color("#b5e3d8")
+        turt.color("#b5e3d8")
         for sq in list_squares:
             turt.showturtle()
             turt.up()

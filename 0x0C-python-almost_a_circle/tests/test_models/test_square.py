@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # test_square.py
+# Sagebeme
 """Defines unittests for models/square.py.
 
 Unittest classes:
@@ -124,7 +125,7 @@ class TestSquare_size(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square((1, 2, 3), 2, 3)
 
-def test_frozenset_size(self):
+    def test_frozenset_size(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square(frozenset({1, 2, 3, 1}))
 
@@ -232,6 +233,7 @@ class TestSquare_x(unittest.TestCase):
     def test_negative_x(self):
         with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             Square(5, -1, 0)
+
 
 class TestSquare_y(unittest.TestCase):
     """Unittests for testing initialization of Square y attribute."""
@@ -531,6 +533,7 @@ class TestSquare_update_args(unittest.TestCase):
         s = Square(10, 10, 10, 10)
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             s.update(89, 1, "invalid", "invalid")
+
 
 class TestSquare_update_kwargs(unittest.TestCase):
     """Unittests for testing update kwargs method of Square class."""
