@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-"""Fetches https://alx-intranet.hbtn.io/status using urllib"""
+"""takes in a URL, sends a request to the URL and displays
+the value of the X-Request-Id variable found in the
+header of the response
+"""
 
 if __name__ == "__main__":
     from urllib import request
-    url = 'https://alx-intranet.hbtn.io/status'
+    from sys import argv
+
+    url = argv[1]
     with request.urlopen(url) as response:
-        data = response.read()
-        print('Body response:')
-        print(f'\t- type: {type(data)}')
-        print(f'\t- content: {data}')
-        print(f'\t- utf8 content: {data.decode("UTF-8")}')
+        data = response.getheader('X-Request-Id')
+        print(data)
