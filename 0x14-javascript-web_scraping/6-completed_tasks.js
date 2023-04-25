@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
-// a script to count items from an API call
+// a js script to count completed tasks by user from an API call
 
 const request = require('request');
-const url = process.argv[2];
+const url = 'https://jsonplaceholder.typicode.com/todos';
 
 request(url, (err, res, body) => {
   if (err) {
@@ -13,10 +13,10 @@ request(url, (err, res, body) => {
   const tasks = JSON.parse(body);
   const dict = {};
   for (const task of tasks) {
-    if (!dict[task.userId]) {
-      dict[task.userId] = 0;
-    }
     if (task.completed) {
+      if (!dict[task.userId]) {
+        dict[task.userId] = 0;
+      }
       dict[task.userId] += 1;
     }
   }
