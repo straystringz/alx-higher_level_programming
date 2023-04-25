@@ -5,7 +5,7 @@
 const request = require('request');
 const url = process.argv[2];
 
-request(url, (err, res, body) => {
+request(url, function (err, res, body) => {
   if (err) {
     console.error(err);
     return;
